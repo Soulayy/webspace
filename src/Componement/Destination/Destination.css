@@ -1,0 +1,7 @@
+p {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.selectP:hover {
+    border-bottom: 3px solid white;
+}
