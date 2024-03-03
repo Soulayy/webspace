@@ -1,60 +1,77 @@
+import "./Technology.css"
 import Navbar from './../Navbar/Navbar'
-import { Link, useParams } from 'react-router-dom'
+import { Link } from 'react-router-dom'
+import { useParams } from 'react-router-dom'
 import Data from "./../../Json/data.json"
 
 
-export default function Technology() {
-  const launch = Data.technology;
-  
-  const {id} = useParams();
-  // const choixlaunch = launch[id]
-  
-  // const imagePath = new URL(
-  //   `../../assets/destination/${choixplanet.images.png}`,
-  //   import.meta.url
-  // ).href; 
 
+export default function Technology() {
+  const technology = Data.technology
+
+  const {it} = useParams()
+
+  const techno = technology[it]
+
+  const imagePath = new URL(
+      `../../assets/technology/${techno.images.portrait}`,
+      import.meta.url
+    ).href;
 
   return (
-    <div className='mydestination h-screen w-screen pt-6'>
-        <Navbar></Navbar>
-        <div className='h-[10%] flex justify-start items-end ps-60 text-white text-3xl'>
-          <h1><span> 03 </span>SPACE LAUNCH 101</h1>
-        </div>
-      <div className='h-[75%] w-full flex justify-center items-center'>
+<div id='technology' className='w-screen h-screen pt-[50px] flex flex-col'>
+        <Navbar/>
 
-          <div className='h-[100%] w-[90%]  text-white flex'>
-            <div className='h-[100%] w-1/2 flex justify-center items-center'>
-              {/* <img className='roue h-[70%] animate-[spin_60s_infinite]' src={imagePath} /> */}
-            </div>
-            <div className='h-[100%] w-1/2 '>
-              <div className='h-[15%] flex justify-around items-center text-2xl'>
-               {
-                launch.map((element, key) => {
-                  return(
-                    <Link className='selectP' key={key} to={`/destination/${key}`}>
-                      {/* {element.name} */}
-                    </Link>
-                  )
-                })
-               }
-              </div>
-              <div className='h-[85%]  flex flex-col p-8'>
-                <div className='flex h-[30%]  justify-start items-center'>
-                  {/* <h1 className='text-9xl h-fit'>{choixplanet.name}</h1> */}
+        <div className='flex gap-8 ms-[10%] mt-[20px] '>
+            <p className='text-gray-500 text-[30px]'>03</p>
+            <p className='text-white text-[30px] '>SPACE LAUNCH 101</p>
+        </div>
+
+        <div className='w-screen h-[400px] mt-[50px] flex'>
+
+            <div className='w-[50%] h-[100%] flex flex-col ms-[100px] mt-[50px]'>
+
+                <div className='flex gap-10'>
+                    {
+                        technology.map((element,key)=>{
+                            return (
+                                
+                                    <Link key={key} to={`/technology/${key}`} className="border-b-2 bg-white rounded-[50%] w-[20px] h-[20px] border-b-white border-solid " >
+
+                                    </Link>
+                                
+                            )
+                        })
+
+                    }
+
                 </div>
-                <div className='h-[40%] w-[90%] p-3 flex justify-center items-center'>
-                  {/* <p className='text-white text-[100%]'>{choixplanet.description}</p> */}
+                <div className='flex flex-col gap-[10px]'>
+                    <p className='text-[70px] text-white'>
+                        {techno.name}   
+                    </p>
+                    <p className='text-white w-[40%]'>
+                        {techno.description}
+                    </p>
+                    <div className='w-[70%] h-[3px] bg-gray-500 mt-10'></div>
+                    <div className='w-[70%] flex flex-col justify-around items-end'>
+
+                    </div>
                 </div>
-                <hr />
-                <div className='h-[20%] flex justify-center items-end flex-col pe-28 pt-10'>
-                  {/* <p>{choixplanet.distance}</p> */}
-                  {/* <h1 className='text-3xl'>{choixplanet.travel}</h1> */}
+
+
+
+            </div>
+
+            <div className='w-[50%] h-[100%] items-start flex justify-center'>
+                <div>
+                    <img className='h-[400px]' src={imagePath} alt="" />
                 </div>
-              </div>
             </div>
-            </div>
-          </div>
-        </div>          
+
+
+        </div>
+
+    </div>
   )
 }

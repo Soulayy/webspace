@@ -26,7 +26,7 @@ const router = createBrowserRouter([
     element: <Crew></Crew>,
   },
   {
-    path: "/technology",
+    path: "/technology/:it",
     element: <Technology></Technology>,
   },
 ]);

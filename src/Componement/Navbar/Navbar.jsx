@@ -23,7 +23,7 @@ export default function Navbar() {
             <Link to={"/crew/0"} className='NavC w-[15%] h-full flex justify-center items-center'>
                 <p>03 CREW</p>
             </Link>
-            <Link to={"/technology"} className='NavC w-[15%] h-full flex justify-center items-center'>
+            <Link to={"/technology/0"} className='NavC w-[15%] h-full flex justify-center items-center'>
                 <p>04 TECHNOLOGY</p>
             </Link>
         </div>
