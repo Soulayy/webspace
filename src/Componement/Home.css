@@ -10,19 +10,7 @@
     font-family: 'Times New Roman', Times, serif;
 }
 
-#earth {
-    position: relative;
-    width: 300px;
-    height: 300px;
-    border-radius: 50%;
-    background: transparent url(./../assets//destination/image-moon.png);
-    background-size: 100%;
-    box-shadow: inset 0px -20px 50px 10px #fefefe80,
-          0px 0px 30px 6px #ffffff70;
-    transform-style: preserve-3d;
-    transform: rotate(20deg);
-    animation: rotate 50s reverse infinite;
-  }
+
   
   @keyframes rotate {
     0% {

@@ -1,4 +1,3 @@
-import React from 'react'
 import Logo from "./../../assets/shared/logo.svg"
 import "./Navbar.css"
 import { Link } from 'react-router-dom'
@@ -24,7 +23,7 @@ export default function Navbar() {
             <Link to={"/crew/0"} className='NavC w-[15%] h-full flex justify-center items-center'>
                 <p>03 CREW</p>
             </Link>
-            <Link className='NavC w-[15%] h-full flex justify-center items-center'>
+            <Link to={"/technology"} className='NavC w-[15%] h-full flex justify-center items-center'>
                 <p>04 TECHNOLOGY</p>
             </Link>
         </div>

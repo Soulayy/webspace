@@ -5,3 +5,16 @@ p {
 .selectP:hover {
     border-bottom: 3px solid white;
 }
+
+.mydestination {
+    background-image: url(./../../assets/destination/background-destination-desktop.jpg);
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-position: 100%;
+    
+}
+
+.roue:hover{
+    scale: 1.1;
+    transition: 2s;
+}

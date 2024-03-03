@@ -17,7 +17,7 @@ export default function Crew() {
   ).href; 
 
   return (
-    <div className='myhome h-screen w-screen pt-6'>
+    <div className='myCREW h-screen w-screen pt-6'>
         <Navbar></Navbar>
         <div className='h-[10%] w-[80%] flex justify-start items-center ps-28  text-white text-3xl'>
           <h1><span> 02 </span>PICK YOUR CREW</h1>

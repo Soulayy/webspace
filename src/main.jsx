@@ -9,6 +9,7 @@ import Home from "./Componement/Home";
 import PageError from "./Componement/PageError/PageError";
 import Destination from "./Componement/Destination/Destination";
 import Crew from "./Componement/Crew/Crew"
+import Technology from "./Componement/Technology/Technology"
 
 const router = createBrowserRouter([
   {
@@ -23,6 +24,10 @@ const router = createBrowserRouter([
   {
     path: "/crew/:ic",
     element: <Crew></Crew>,
+  },
+  {
+    path: "/technology",
+    element: <Technology></Technology>,
   },
 ]);
 
