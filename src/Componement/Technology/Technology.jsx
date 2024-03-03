@@ -19,7 +19,7 @@ export default function Technology() {
     ).href;
 
   return (
-<div id='technology' className='w-screen h-screen pt-[50px] flex flex-col'>
+<div id='technology' className='w-screen h-screen pt-[50px] flex flex-col '>
         <Navbar/>
 
         <div className='flex gap-8 ms-[10%] mt-[20px] '>
